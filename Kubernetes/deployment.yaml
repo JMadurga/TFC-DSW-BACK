@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend
+          image: jmadurga/miapp-backend:latest
+          ports:
+            - containerPort: 3300
+          env:
+            - name: DB_HOST
+              value: mssql-service
+            - name: DB_USER
+              value: sa
+            - name: DB_PASSWORD
+              value: YourStrong@Passw0rd
+            - name: DB_NAME
+              value: master
+            - name: DB_PORT
+              value: "1433"
+            - name: PORT
+              value: "3300"
+            - name: JWT_SECRET
+              value: 8af7aa14e427d8fadbb92a4c3109624b6d85632c81072052eb94
