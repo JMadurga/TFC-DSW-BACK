@@ -27,7 +27,7 @@ module.exports = {
           key: 'id_producto',
         },
         onUpdate: 'CASCADE',
-        onDelete: 'RESTRICT',
+        onDelete: 'NO ACTION',
       },
       unidades: {
         type: Sequelize.INTEGER,
