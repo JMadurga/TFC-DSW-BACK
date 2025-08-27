@@ -18,6 +18,7 @@ app.use('/clasevino', authMiddleware, require('./controllers/claseVino'));
 app.use('/productos', authMiddleware, require('./controllers/productos'));
 app.use('/trabajadores', authMiddleware, require('./controllers/trabajadores'));
 app.use('/categoria', authMiddleware , require('./controllers/categoria'));
+app.use('/reposiciones', authMiddleware, require('./controllers/reposicion'));
 app.use('/auth', require('./controllers/authController'));
 
 
