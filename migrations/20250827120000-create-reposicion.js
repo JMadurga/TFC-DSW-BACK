@@ -17,7 +17,7 @@ module.exports = {
           key: 'id_trabajador',
         },
         onUpdate: 'CASCADE',
-        onDelete: 'RESTRICT',
+        onDelete: 'NO ACTION',
       },
       creacion: {
         type: Sequelize.DATE,
